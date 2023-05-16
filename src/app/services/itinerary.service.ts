@@ -9,7 +9,7 @@ export class ItineraryService {
   constructor(private http: HttpClient) { }
 
   health() {
-    this.http.get('http://localhost:8080/v1/private/health').subscribe((resp) => {
+    this.http.post('http://localhost:8080/v1/private/itinerary', {'title': 'teste'}).subscribe((resp) => {
       console.log(resp)
     })
   }
